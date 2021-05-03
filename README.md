@@ -1,0 +1,4 @@
+- 👋 Hi, I’m Danny Lillard!
+- 👀 I’m interested in Database development, ETL, and big data.
+- 🌱 I’m currently learning SQL, and general database knowledge.
+- 📫 How to reach me: dannylillard10@gmail.com
