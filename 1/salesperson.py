@@ -41,6 +41,7 @@ def read_and_save(file, num_iterations):
         y = int(y)
         ourPoints.append((x,y))
     return ourPoints
+            
 
 #let's go ahead and create all perms.
 def createPerms(ourPoints):
@@ -52,14 +53,18 @@ def createPerms(ourPoints):
         for i in range(len(ourPoints) - 1):
             dist += sqrt((ourPerms[permIndex][i][0]-ourPerms[permIndex][i+1][0])**2 + 
                         (ourPerms[permIndex][i][1]-ourPerms[permIndex][i+1][1])**2)
-        dist += ((ourPerms[permIndex][0][0]-ourPerms[permIndex][-1][0])**2 + 
+        dist += sqrt((ourPerms[permIndex][0][0]-ourPerms[permIndex][-1][0])**2 + 
                 (ourPerms[permIndex][0][1]-ourPerms[permIndex][-1][1])**2)
         if(permIndex == 0):
             lowestDist = dist
+            lowestPerm = ourPerms[permIndex]
         else:
             if(dist < lowestDist):
                 lowestDist = dist
+                lowestPerm = ourPerms[permIndex]
+        dist = 0
     print(lowestDist)
+    print(lowestPerm)
 
 if __name__ == "__main__":
     main()
